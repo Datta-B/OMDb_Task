@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     }()
     
     var movieViewModel = MovieViewModel(httpclient: HttpClient())
+    private lazy var alertViewController = AlertViewController(nibName: nil, bundle: nil)
 
     private var searchWorkItem: DispatchWorkItem?
 
@@ -42,6 +43,7 @@ class ViewController: UIViewController {
     private func Configuration() {
         
         title = "Movies"
+        navigationItem.titleView = searchBar
         
         // register cells
         let nib = UINib(nibName: "MoviesTableViewCell", bundle: nil)
@@ -54,32 +56,52 @@ class ViewController: UIViewController {
         
         stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 60).isActive = true
         stackView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-       // stackView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
         stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        stackView.addArrangedSubview(searchBar)
+        //stackView.addArrangedSubview(searchBar)
         stackView.addArrangedSubview(moviesTableView)
         
         
-        searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+//        searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+//        searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+//        searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        
+        add(alertViewController)
+        alertViewController.showStartSearch()
     }
     
     private func setUpBinding() {
-        movieViewModel.states.bind { result in
-            switch result {
-            case .loading:
-                print("loading")
-            case .populated:
-                DispatchQueue.main.async { [weak self] in
-                    self?.moviesTableView.reloadData()
+        movieViewModel.states.bind { [weak self] result in
+            guard let self = self else { return }
+
+            DispatchQueue.main.async {
+                // By default, hide the alert view
+                self.alertViewController.view.isHidden = true
+
+                switch result {
+                case .idle:
+                    self.alertViewController.view.isHidden = false
+                    self.alertViewController.showStartSearch()
+
+                case .loading:
+                    self.alertViewController.view.isHidden = false
+                    // You may add any loading indication here if necessary
+
+                case .noResults:
+                    self.alertViewController.view.isHidden = false
+                    self.alertViewController.showNoResults()
+
+                case .failure:
+                    self.alertViewController.view.isHidden = false
+                    self.alertViewController.showDataLoadingError()
+
+                case .success:
+                    // Hide alert and reload table view when data is successfully loaded
+                    self.alertViewController.view.isHidden = true
+                    self.moviesTableView.reloadData()
                 }
-            case .erro(_):
-                print("error")
             }
         }
     }
-    
     private func search(withText text: String) {
           searchWorkItem?.cancel()
           
@@ -131,13 +153,22 @@ extension ViewController : MovieCellDelegate {
     func didToggleFavorite(index: Int) {
         movieViewModel.response.search?[index].isFavorite.toggle()
         moviesTableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .none)
+        let search = movieViewModel.response.search?[index] ?? Search()
+        if search.isFavorite {
+            FavoritesManager.shared.saveFavorite(search: search)
+        }else{
+            FavoritesManager.shared.removeFavorite(search: search)
+        }
     }
-    
-    
+
 }
 
 extension ViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-            search(withText: searchText)
-        }
+        search(withText: searchText)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        search(withText: "")
+    }
 }

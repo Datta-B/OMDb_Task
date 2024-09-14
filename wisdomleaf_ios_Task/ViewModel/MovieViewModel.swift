@@ -10,13 +10,15 @@ import Combine
 
 enum states {
     case loading
-    case populated
-    case erro(message : String)
+    case idle
+    case noResults
+    case success
+    case failure(Error)
 }
 
 class MovieViewModel  {
     var response : MovieResponse = MovieResponse()
-    var states : Observable<states> = .init(.loading)
+    var states : Observable<states> = .init(.idle)
     var httpclient : HttpClient
     
     init( httpclient: HttpClient) {
@@ -24,11 +26,16 @@ class MovieViewModel  {
     }
     
     func getMoviesList(searchTxt : String) {
+        self.states.value = .loading
         httpclient.fetchRequest("http://www.omdbapi.com/?apikey=a94b7bb0&type=movie&s=\(searchTxt)", type: MovieResponse.self) { result in
             switch result {
             case .success(let data):
-                self.states.value = .populated
-                self.response = data
+                if data.totalResults != nil{
+                    self.states.value = .success
+                    self.response = data
+                }else{
+                    self.states.value = .noResults
+                }
             case .failure(let failure):
                 print(failure.localizedDescription)
             }

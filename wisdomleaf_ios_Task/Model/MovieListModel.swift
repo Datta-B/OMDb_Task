@@ -38,15 +38,17 @@ struct Search: Codable {
         case imdbID
         case type = "Type"
         case poster = "Poster"
+    
     }
     
     // Custom initializer with default values
-    init(title: String? = nil, year: String? = nil, imdbID: String? = nil, type: TypeEnum? = nil, poster: String? = nil) {
+    init(title: String? = nil, year: String? = nil, imdbID: String? = nil, type: TypeEnum? = nil, poster: String? = nil,isFavorite: Bool = false  ) {
         self.title = title
         self.year = year
         self.imdbID = imdbID
         self.type = type
         self.poster = poster
+        self.isFavorite = isFavorite
     }
 }
 enum TypeEnum: String, Codable {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L4W-4o-brN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ihN-SJ-bug">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -22,7 +22,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973.28244274809151" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="2944.2748091603053" y="-2.1126760563380285"/>
+        </scene>
+        <!--Favorite Movies View Controller-->
+        <scene sceneID="5JQ-2i-KKu">
+            <objects>
+                <viewController storyboardIdentifier="FavoriteMoviesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aI9-7a-jhu" customClass="FavoriteMoviesViewController" customModule="wisdomleaf_ios_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TrZ-H6-Kdx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="E5K-Aa-quy">
+                                <rect key="frame" x="0.0" y="120" width="393" height="649"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Movies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRC-dp-nEW">
+                                <rect key="frame" x="20" y="94" width="353" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cm7-cz-kXJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cm7-cz-kXJ" firstAttribute="trailing" secondItem="E5K-Aa-quy" secondAttribute="trailing" id="2kt-VL-vd9"/>
+                            <constraint firstItem="cm7-cz-kXJ" firstAttribute="bottom" secondItem="E5K-Aa-quy" secondAttribute="bottom" id="LYc-bv-cXx"/>
+                            <constraint firstItem="E5K-Aa-quy" firstAttribute="top" secondItem="uRC-dp-nEW" secondAttribute="bottom" constant="5" id="MqJ-ed-KgW"/>
+                            <constraint firstItem="uRC-dp-nEW" firstAttribute="leading" secondItem="cm7-cz-kXJ" secondAttribute="leading" constant="20" id="Txw-Hs-uaC"/>
+                            <constraint firstItem="E5K-Aa-quy" firstAttribute="leading" secondItem="cm7-cz-kXJ" secondAttribute="leading" id="WAG-My-laJ"/>
+                            <constraint firstItem="uRC-dp-nEW" firstAttribute="top" secondItem="cm7-cz-kXJ" secondAttribute="top" constant="35" id="YuH-Hk-ncU"/>
+                            <constraint firstItem="cm7-cz-kXJ" firstAttribute="trailing" secondItem="uRC-dp-nEW" secondAttribute="trailing" constant="20" id="bzd-Ik-ZMh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="eaD-aP-vlb"/>
+                    <connections>
+                        <outlet property="FavoriteMoviesTableView" destination="E5K-Aa-quy" id="CV4-qz-4Ze"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="moQ-ze-N3s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031" y="797"/>
         </scene>
         <!--Movies Detail View Controller-->
         <scene sceneID="bY4-e5-7DX">
@@ -37,28 +77,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PzD-YC-t6j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="-14"/>
+            <point key="canvasLocation" x="3904.5801526717555" y="48.591549295774648"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="uBf-S3-5cM">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ihN-SJ-bug" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Fi-Jh-9hv">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ecs-ee-fH3" kind="relationship" relationship="viewControllers" id="7xh-gh-Prj"/>
+                        <segue destination="aI9-7a-jhu" kind="relationship" relationship="viewControllers" id="AWb-eA-rEG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LO4-eh-Tdm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.28244274809151" y="-2.1126760563380285"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="fFi-mQ-Y8s">
+        <scene sceneID="l4V-8I-pBe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L4W-4o-brN" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ecs-ee-fH3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" selectedImage="movieclapper" catalog="system" systemItem="search" id="jSJ-8F-BxI"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yRy-6z-fDz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oKt-St-MaF">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Fcn-DJ-EEs"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LCC-iU-9ae"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wqm-xE-EZz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="82X-UA-O51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="2017.5572519083969" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
+        <image name="movieclapper" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
