@@ -1,0 +1,750 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F85AB8E22C92D7CA00CB3758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85AB8E12C92D7CA00CB3758 /* AppDelegate.swift */; };
+		F85AB8E42C92D7CA00CB3758 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85AB8E32C92D7CA00CB3758 /* SceneDelegate.swift */; };
+		F85AB8E62C92D7CA00CB3758 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85AB8E52C92D7CA00CB3758 /* ViewController.swift */; };
+		F85AB8E92C92D7CA00CB3758 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85AB8E72C92D7CA00CB3758 /* Main.storyboard */; };
+		F85AB8EB2C92D7CB00CB3758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F85AB8EA2C92D7CB00CB3758 /* Assets.xcassets */; };
+		F85AB8EE2C92D7CB00CB3758 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85AB8EC2C92D7CB00CB3758 /* LaunchScreen.storyboard */; };
+		F85AB8F92C92D7CB00CB3758 /* wisdomleaf_ios_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85AB8F82C92D7CB00CB3758 /* wisdomleaf_ios_TaskTests.swift */; };
+		F85AB9032C92D7CB00CB3758 /* wisdomleaf_ios_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85AB9022C92D7CB00CB3758 /* wisdomleaf_ios_TaskUITests.swift */; };
+		F85AB9052C92D7CB00CB3758 /* wisdomleaf_ios_TaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85AB9042C92D7CB00CB3758 /* wisdomleaf_ios_TaskUITestsLaunchTests.swift */; };
+		F85AB91C2C92EEDC00CB3758 /* MoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85AB91A2C92EEDC00CB3758 /* MoviesTableViewCell.swift */; };
+		F85AB91D2C92EEDC00CB3758 /* MoviesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F85AB91B2C92EEDC00CB3758 /* MoviesTableViewCell.xib */; };
+		F85AB9202C93015000CB3758 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85AB91F2C93015000CB3758 /* NetworkManager.swift */; };
+		F85AB9232C93211400CB3758 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85AB9222C93211400CB3758 /* Constants.swift */; };
+		F85AB9252C93228F00CB3758 /* MovieListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85AB9242C93228F00CB3758 /* MovieListModel.swift */; };
+		F85AB9282C93254600CB3758 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85AB9272C93254600CB3758 /* MovieViewModel.swift */; };
+		F85AB92B2C9341DB00CB3758 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = F85AB92A2C9341DB00CB3758 /* SDWebImage */; };
+		F85AB92D2C9341DB00CB3758 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F85AB92C2C9341DB00CB3758 /* SDWebImageMapKit */; };
+		F85AB9302C93558200CB3758 /* UIView-Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = F85AB92F2C93558200CB3758 /* UIView-Shimmer */; };
+		F85AB9322C93648D00CB3758 /* MoviesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85AB9312C93648D00CB3758 /* MoviesDetailViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F85AB8F52C92D7CB00CB3758 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F85AB8D62C92D7CA00CB3758 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F85AB8DD2C92D7CA00CB3758;
+			remoteInfo = wisdomleaf_ios_Task;
+		};
+		F85AB8FF2C92D7CB00CB3758 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F85AB8D62C92D7CA00CB3758 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F85AB8DD2C92D7CA00CB3758;
+			remoteInfo = wisdomleaf_ios_Task;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F85AB8DE2C92D7CA00CB3758 /* wisdomleaf_ios_Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wisdomleaf_ios_Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85AB8E12C92D7CA00CB3758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F85AB8E32C92D7CA00CB3758 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F85AB8E52C92D7CA00CB3758 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F85AB8E82C92D7CA00CB3758 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F85AB8EA2C92D7CB00CB3758 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F85AB8ED2C92D7CB00CB3758 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F85AB8EF2C92D7CB00CB3758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F85AB8F42C92D7CB00CB3758 /* wisdomleaf_ios_TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wisdomleaf_ios_TaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85AB8F82C92D7CB00CB3758 /* wisdomleaf_ios_TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wisdomleaf_ios_TaskTests.swift; sourceTree = "<group>"; };
+		F85AB8FE2C92D7CB00CB3758 /* wisdomleaf_ios_TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wisdomleaf_ios_TaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85AB9022C92D7CB00CB3758 /* wisdomleaf_ios_TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wisdomleaf_ios_TaskUITests.swift; sourceTree = "<group>"; };
+		F85AB9042C92D7CB00CB3758 /* wisdomleaf_ios_TaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wisdomleaf_ios_TaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F85AB91A2C92EEDC00CB3758 /* MoviesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewCell.swift; sourceTree = "<group>"; };
+		F85AB91B2C92EEDC00CB3758 /* MoviesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesTableViewCell.xib; sourceTree = "<group>"; };
+		F85AB91F2C93015000CB3758 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F85AB9222C93211400CB3758 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F85AB9242C93228F00CB3758 /* MovieListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListModel.swift; sourceTree = "<group>"; };
+		F85AB9272C93254600CB3758 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		F85AB9312C93648D00CB3758 /* MoviesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDetailViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F85AB8DB2C92D7CA00CB3758 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85AB92D2C9341DB00CB3758 /* SDWebImageMapKit in Frameworks */,
+				F85AB9302C93558200CB3758 /* UIView-Shimmer in Frameworks */,
+				F85AB92B2C9341DB00CB3758 /* SDWebImage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85AB8F12C92D7CB00CB3758 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85AB8FB2C92D7CB00CB3758 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F85AB8D52C92D7CA00CB3758 = {
+			isa = PBXGroup;
+			children = (
+				F85AB8E02C92D7CA00CB3758 /* wisdomleaf_ios_Task */,
+				F85AB8F72C92D7CB00CB3758 /* wisdomleaf_ios_TaskTests */,
+				F85AB9012C92D7CB00CB3758 /* wisdomleaf_ios_TaskUITests */,
+				F85AB8DF2C92D7CA00CB3758 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F85AB8DF2C92D7CA00CB3758 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F85AB8DE2C92D7CA00CB3758 /* wisdomleaf_ios_Task.app */,
+				F85AB8F42C92D7CB00CB3758 /* wisdomleaf_ios_TaskTests.xctest */,
+				F85AB8FE2C92D7CB00CB3758 /* wisdomleaf_ios_TaskUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F85AB8E02C92D7CA00CB3758 /* wisdomleaf_ios_Task */ = {
+			isa = PBXGroup;
+			children = (
+				F85AB9212C9320D800CB3758 /* Constants */,
+				F85AB91E2C93011400CB3758 /* NetworkManager */,
+				F85AB9142C92E9AC00CB3758 /* Model */,
+				F85AB9132C92E9A900CB3758 /* ViewModel */,
+				F85AB9122C92E9A400CB3758 /* View */,
+				F85AB9152C92EA3E00CB3758 /* Controller */,
+				F85AB9162C92EA5100CB3758 /* Source */,
+				F85AB8E72C92D7CA00CB3758 /* Main.storyboard */,
+				F85AB8EA2C92D7CB00CB3758 /* Assets.xcassets */,
+				F85AB8EC2C92D7CB00CB3758 /* LaunchScreen.storyboard */,
+				F85AB8EF2C92D7CB00CB3758 /* Info.plist */,
+			);
+			path = wisdomleaf_ios_Task;
+			sourceTree = "<group>";
+		};
+		F85AB8F72C92D7CB00CB3758 /* wisdomleaf_ios_TaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				F85AB8F82C92D7CB00CB3758 /* wisdomleaf_ios_TaskTests.swift */,
+			);
+			path = wisdomleaf_ios_TaskTests;
+			sourceTree = "<group>";
+		};
+		F85AB9012C92D7CB00CB3758 /* wisdomleaf_ios_TaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F85AB9022C92D7CB00CB3758 /* wisdomleaf_ios_TaskUITests.swift */,
+				F85AB9042C92D7CB00CB3758 /* wisdomleaf_ios_TaskUITestsLaunchTests.swift */,
+			);
+			path = wisdomleaf_ios_TaskUITests;
+			sourceTree = "<group>";
+		};
+		F85AB9122C92E9A400CB3758 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F85AB9172C92EE8800CB3758 /* TableviewCells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F85AB9132C92E9A900CB3758 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F85AB9272C93254600CB3758 /* MovieViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F85AB9142C92E9AC00CB3758 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F85AB9242C93228F00CB3758 /* MovieListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F85AB9152C92EA3E00CB3758 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F85AB8E52C92D7CA00CB3758 /* ViewController.swift */,
+				F85AB9312C93648D00CB3758 /* MoviesDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F85AB9162C92EA5100CB3758 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F85AB8E12C92D7CA00CB3758 /* AppDelegate.swift */,
+				F85AB8E32C92D7CA00CB3758 /* SceneDelegate.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F85AB9172C92EE8800CB3758 /* TableviewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F85AB91A2C92EEDC00CB3758 /* MoviesTableViewCell.swift */,
+				F85AB91B2C92EEDC00CB3758 /* MoviesTableViewCell.xib */,
+			);
+			path = TableviewCells;
+			sourceTree = "<group>";
+		};
+		F85AB91E2C93011400CB3758 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				F85AB91F2C93015000CB3758 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		F85AB9212C9320D800CB3758 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F85AB9222C93211400CB3758 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F85AB8DD2C92D7CA00CB3758 /* wisdomleaf_ios_Task */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F85AB9082C92D7CB00CB3758 /* Build configuration list for PBXNativeTarget "wisdomleaf_ios_Task" */;
+			buildPhases = (
+				F85AB8DA2C92D7CA00CB3758 /* Sources */,
+				F85AB8DB2C92D7CA00CB3758 /* Frameworks */,
+				F85AB8DC2C92D7CA00CB3758 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wisdomleaf_ios_Task;
+			packageProductDependencies = (
+				F85AB92A2C9341DB00CB3758 /* SDWebImage */,
+				F85AB92C2C9341DB00CB3758 /* SDWebImageMapKit */,
+				F85AB92F2C93558200CB3758 /* UIView-Shimmer */,
+			);
+			productName = wisdomleaf_ios_Task;
+			productReference = F85AB8DE2C92D7CA00CB3758 /* wisdomleaf_ios_Task.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F85AB8F32C92D7CB00CB3758 /* wisdomleaf_ios_TaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F85AB90B2C92D7CB00CB3758 /* Build configuration list for PBXNativeTarget "wisdomleaf_ios_TaskTests" */;
+			buildPhases = (
+				F85AB8F02C92D7CB00CB3758 /* Sources */,
+				F85AB8F12C92D7CB00CB3758 /* Frameworks */,
+				F85AB8F22C92D7CB00CB3758 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F85AB8F62C92D7CB00CB3758 /* PBXTargetDependency */,
+			);
+			name = wisdomleaf_ios_TaskTests;
+			productName = wisdomleaf_ios_TaskTests;
+			productReference = F85AB8F42C92D7CB00CB3758 /* wisdomleaf_ios_TaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F85AB8FD2C92D7CB00CB3758 /* wisdomleaf_ios_TaskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F85AB90E2C92D7CB00CB3758 /* Build configuration list for PBXNativeTarget "wisdomleaf_ios_TaskUITests" */;
+			buildPhases = (
+				F85AB8FA2C92D7CB00CB3758 /* Sources */,
+				F85AB8FB2C92D7CB00CB3758 /* Frameworks */,
+				F85AB8FC2C92D7CB00CB3758 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F85AB9002C92D7CB00CB3758 /* PBXTargetDependency */,
+			);
+			name = wisdomleaf_ios_TaskUITests;
+			productName = wisdomleaf_ios_TaskUITests;
+			productReference = F85AB8FE2C92D7CB00CB3758 /* wisdomleaf_ios_TaskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F85AB8D62C92D7CA00CB3758 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					F85AB8DD2C92D7CA00CB3758 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					F85AB8F32C92D7CB00CB3758 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = F85AB8DD2C92D7CA00CB3758;
+					};
+					F85AB8FD2C92D7CB00CB3758 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = F85AB8DD2C92D7CA00CB3758;
+					};
+				};
+			};
+			buildConfigurationList = F85AB8D92C92D7CA00CB3758 /* Build configuration list for PBXProject "wisdomleaf_ios_Task" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F85AB8D52C92D7CA00CB3758;
+			packageReferences = (
+				F85AB9292C9341DB00CB3758 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				F85AB92E2C93558200CB3758 /* XCRemoteSwiftPackageReference "UIView-Shimmer" */,
+			);
+			productRefGroup = F85AB8DF2C92D7CA00CB3758 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F85AB8DD2C92D7CA00CB3758 /* wisdomleaf_ios_Task */,
+				F85AB8F32C92D7CB00CB3758 /* wisdomleaf_ios_TaskTests */,
+				F85AB8FD2C92D7CB00CB3758 /* wisdomleaf_ios_TaskUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F85AB8DC2C92D7CA00CB3758 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85AB8EE2C92D7CB00CB3758 /* LaunchScreen.storyboard in Resources */,
+				F85AB8EB2C92D7CB00CB3758 /* Assets.xcassets in Resources */,
+				F85AB91D2C92EEDC00CB3758 /* MoviesTableViewCell.xib in Resources */,
+				F85AB8E92C92D7CA00CB3758 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85AB8F22C92D7CB00CB3758 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85AB8FC2C92D7CB00CB3758 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F85AB8DA2C92D7CA00CB3758 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85AB8E62C92D7CA00CB3758 /* ViewController.swift in Sources */,
+				F85AB8E22C92D7CA00CB3758 /* AppDelegate.swift in Sources */,
+				F85AB9202C93015000CB3758 /* NetworkManager.swift in Sources */,
+				F85AB9282C93254600CB3758 /* MovieViewModel.swift in Sources */,
+				F85AB91C2C92EEDC00CB3758 /* MoviesTableViewCell.swift in Sources */,
+				F85AB9322C93648D00CB3758 /* MoviesDetailViewController.swift in Sources */,
+				F85AB9252C93228F00CB3758 /* MovieListModel.swift in Sources */,
+				F85AB8E42C92D7CA00CB3758 /* SceneDelegate.swift in Sources */,
+				F85AB9232C93211400CB3758 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85AB8F02C92D7CB00CB3758 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85AB8F92C92D7CB00CB3758 /* wisdomleaf_ios_TaskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85AB8FA2C92D7CB00CB3758 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85AB9052C92D7CB00CB3758 /* wisdomleaf_ios_TaskUITestsLaunchTests.swift in Sources */,
+				F85AB9032C92D7CB00CB3758 /* wisdomleaf_ios_TaskUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F85AB8F62C92D7CB00CB3758 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F85AB8DD2C92D7CA00CB3758 /* wisdomleaf_ios_Task */;
+			targetProxy = F85AB8F52C92D7CB00CB3758 /* PBXContainerItemProxy */;
+		};
+		F85AB9002C92D7CB00CB3758 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F85AB8DD2C92D7CA00CB3758 /* wisdomleaf_ios_Task */;
+			targetProxy = F85AB8FF2C92D7CB00CB3758 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F85AB8E72C92D7CA00CB3758 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F85AB8E82C92D7CA00CB3758 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F85AB8EC2C92D7CB00CB3758 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F85AB8ED2C92D7CB00CB3758 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F85AB9062C92D7CB00CB3758 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F85AB9072C92D7CB00CB3758 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F85AB9092C92D7CB00CB3758 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = wisdomleaf_ios_Task/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dattas.wisdomleaf-ios-Task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F85AB90A2C92D7CB00CB3758 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = wisdomleaf_ios_Task/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dattas.wisdomleaf-ios-Task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F85AB90C2C92D7CB00CB3758 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dattas.wisdomleaf-ios-TaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wisdomleaf_ios_Task.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/wisdomleaf_ios_Task";
+			};
+			name = Debug;
+		};
+		F85AB90D2C92D7CB00CB3758 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dattas.wisdomleaf-ios-TaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wisdomleaf_ios_Task.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/wisdomleaf_ios_Task";
+			};
+			name = Release;
+		};
+		F85AB90F2C92D7CB00CB3758 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dattas.wisdomleaf-ios-TaskUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = wisdomleaf_ios_Task;
+			};
+			name = Debug;
+		};
+		F85AB9102C92D7CB00CB3758 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dattas.wisdomleaf-ios-TaskUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = wisdomleaf_ios_Task;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F85AB8D92C92D7CA00CB3758 /* Build configuration list for PBXProject "wisdomleaf_ios_Task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F85AB9062C92D7CB00CB3758 /* Debug */,
+				F85AB9072C92D7CB00CB3758 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F85AB9082C92D7CB00CB3758 /* Build configuration list for PBXNativeTarget "wisdomleaf_ios_Task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F85AB9092C92D7CB00CB3758 /* Debug */,
+				F85AB90A2C92D7CB00CB3758 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F85AB90B2C92D7CB00CB3758 /* Build configuration list for PBXNativeTarget "wisdomleaf_ios_TaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F85AB90C2C92D7CB00CB3758 /* Debug */,
+				F85AB90D2C92D7CB00CB3758 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F85AB90E2C92D7CB00CB3758 /* Build configuration list for PBXNativeTarget "wisdomleaf_ios_TaskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F85AB90F2C92D7CB00CB3758 /* Debug */,
+				F85AB9102C92D7CB00CB3758 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F85AB9292C9341DB00CB3758 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.7;
+			};
+		};
+		F85AB92E2C93558200CB3758 /* XCRemoteSwiftPackageReference "UIView-Shimmer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/omerfarukozturk/UIView-Shimmer.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F85AB92A2C9341DB00CB3758 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F85AB9292C9341DB00CB3758 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		F85AB92C2C9341DB00CB3758 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F85AB9292C9341DB00CB3758 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		F85AB92F2C93558200CB3758 /* UIView-Shimmer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F85AB92E2C93558200CB3758 /* XCRemoteSwiftPackageReference "UIView-Shimmer" */;
+			productName = "UIView-Shimmer";
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F85AB8D62C92D7CA00CB3758 /* Project object */;
+}
