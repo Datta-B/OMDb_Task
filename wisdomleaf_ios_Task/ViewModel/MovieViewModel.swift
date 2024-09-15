@@ -19,27 +19,27 @@ enum states {
 class MovieViewModel  {
     var response : MovieResponse = MovieResponse()
     var states : Observable<states> = .init(.idle)
-    var httpclient : HttpClient
+    var httpclient: NetworkRequestProtocol
     
-    init( httpclient: HttpClient) {
+    init(httpclient: NetworkRequestProtocol) {
         self.httpclient = httpclient
     }
     
     func getMoviesList(searchTxt : String) {
         self.states.value = .loading
-        httpclient.fetchRequest("http://www.omdbapi.com/?apikey=a94b7bb0&type=movie&s=\(searchTxt)", type: MovieResponse.self) { result in
+        httpclient.fetchRequest("\(Constants.baseURL)/?apikey=\(Constants.ApiKey)&type=movie&s=\(searchTxt)", type: MovieResponse.self) { result in
             switch result {
             case .success(let data):
                 if data.totalResults != nil{
-                    self.states.value = .success
                     self.response = data
+                    self.states.value = .success
                 }else{
                     self.states.value = .noResults
+                    self.response.search = []
                 }
             case .failure(let failure):
-                print(failure.localizedDescription)
+                self.states.value = .failure(failure)
             }
         }
-        
     }
 }

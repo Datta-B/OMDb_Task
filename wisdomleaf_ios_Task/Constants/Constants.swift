@@ -10,4 +10,5 @@ import UIKit
 
 struct Constants {
     static let baseURL = "http://www.omdbapi.com/"
+    static let ApiKey = "a94b7bb0"
 }

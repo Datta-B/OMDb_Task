@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         searchBar.delegate = self
         return searchBar
     }()
-        
+    
     lazy var moviesTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -26,12 +26,15 @@ class ViewController: UIViewController {
     }()
     
     var movieViewModel = MovieViewModel(httpclient: HttpClient())
-    private lazy var alertViewController = AlertViewController(nibName: nil, bundle: nil)
-
-    private var searchWorkItem: DispatchWorkItem?
-
     
-    // viewDidLoad
+    private lazy var alertViewController = AlertViewController(nibName: nil, bundle: nil)
+    
+    private var searchWorkItem: DispatchWorkItem?
+    
+    private var containerView: UIView?
+    
+    
+    //MARK:- viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,7 +42,7 @@ class ViewController: UIViewController {
         setUpBinding()
     }
     
-    // Configuration
+    // MARK:-  Configuration
     private func Configuration() {
         
         title = "Movies"
@@ -57,65 +60,109 @@ class ViewController: UIViewController {
         stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 60).isActive = true
         stackView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        //stackView.addArrangedSubview(searchBar)
+        // stackView.addArrangedSubview(searchBar)
         stackView.addArrangedSubview(moviesTableView)
         
         
-//        searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-//        searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-//        searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        //        searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        //        searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        //        searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         
         add(alertViewController)
         alertViewController.showStartSearch()
     }
     
+    // MARK:- setUpBinding
     private func setUpBinding() {
         movieViewModel.states.bind { [weak self] result in
             guard let self = self else { return }
-
+            
             DispatchQueue.main.async {
                 // By default, hide the alert view
                 self.alertViewController.view.isHidden = true
-
+                
                 switch result {
                 case .idle:
                     self.alertViewController.view.isHidden = false
                     self.alertViewController.showStartSearch()
-
+                    
                 case .loading:
-                    self.alertViewController.view.isHidden = false
+                    self.alertViewController.view.isHidden = true
+                    self.showLoadingView()
                     // You may add any loading indication here if necessary
-
+                    
                 case .noResults:
                     self.alertViewController.view.isHidden = false
                     self.alertViewController.showNoResults()
-
+                    self.dismissLoadingView()
+                    
+                    
                 case .failure:
                     self.alertViewController.view.isHidden = false
                     self.alertViewController.showDataLoadingError()
-
+                    self.dismissLoadingView()
+                    
                 case .success:
                     // Hide alert and reload table view when data is successfully loaded
                     self.alertViewController.view.isHidden = true
                     self.moviesTableView.reloadData()
+                    self.dismissLoadingView()
                 }
             }
         }
     }
+    
     private func search(withText text: String) {
-          searchWorkItem?.cancel()
-          
+        searchWorkItem?.cancel()
+        
         let task = DispatchWorkItem { [weak self] in
             guard let self = self else { return }
             movieViewModel.getMoviesList(searchTxt: text)
         }
-          
-          searchWorkItem = task
-          
-          // Excute the workitem after 0.3 seconds.
-          DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: task)
-      }
+        
+        searchWorkItem = task
+        
+        // Excute the workitem after 0.3 seconds.
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: task)
+    }
+    
+    func showLoadingView() {
+        guard containerView == nil else { return }
+        
+        containerView = UIView(frame: view.bounds)
+        view.addSubview(containerView!)
+        
+        containerView?.backgroundColor = .systemBackground
+        containerView?.alpha = 0
+        
+        UIView.animate(withDuration: 0.25) {
+            self.containerView?.alpha = 0.8
+        }
+        
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        containerView?.addSubview(activityIndicator)
+        
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        ])
+        
+        activityIndicator.startAnimating()
+    }
+    
+    func dismissLoadingView() {
+        DispatchQueue.main.async {
+            if let containerView = self.containerView, containerView.superview != nil {
+                containerView.removeFromSuperview()
+                self.containerView = nil
+            }
+        }
+    }
 }
+
+// MARK:- TableView Delegate Methods
 
 extension ViewController : UITableViewDelegate,UITableViewDataSource {
     
@@ -147,8 +194,19 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource {
         return 160
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let movieListResult = movieViewModel.response.search
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "MoviesDetailViewController") as? MoviesDetailViewController
+        viewController?.search = movieListResult?[indexPath.row] ?? Search()
+        self.navigationController?.pushViewController(viewController!, animated: true)
+        
+    }
+    
 }
 
+// MARK:- Protocol Delegate Call
 extension ViewController : MovieCellDelegate {
     func didToggleFavorite(index: Int) {
         movieViewModel.response.search?[index].isFavorite.toggle()
@@ -160,8 +218,10 @@ extension ViewController : MovieCellDelegate {
             FavoritesManager.shared.removeFavorite(search: search)
         }
     }
-
+    
 }
+
+// MARK:- searchBar Delegate Methods
 
 extension ViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -172,3 +232,5 @@ extension ViewController : UISearchBarDelegate {
         search(withText: "")
     }
 }
+
+

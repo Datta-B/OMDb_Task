@@ -24,6 +24,7 @@ extension UserDefaults {
         return nil
     }
 }
+private var containerView: UIView?
 
 extension UIViewController {
     public func add(_ child: UIViewController) {
@@ -38,14 +39,17 @@ extension UIViewController {
         ])
         child.didMove(toParent: self)
     }
-
+    
     public func remove(_ child: UIViewController) {
         guard child.parent != nil else {
             return
         }
-
+        
         child.willMove(toParent: nil)
         child.view.removeFromSuperview()
         child.removeFromParent()
     }
+    
 }
+
+
