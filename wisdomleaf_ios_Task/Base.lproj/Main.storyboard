@@ -58,7 +58,7 @@
                             <constraint firstItem="cm7-cz-kXJ" firstAttribute="trailing" secondItem="uRC-dp-nEW" secondAttribute="trailing" constant="20" id="bzd-Ik-ZMh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="eaD-aP-vlb"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="eaD-aP-vlb"/>
                     <connections>
                         <outlet property="FavoriteMoviesTableView" destination="E5K-Aa-quy" id="CV4-qz-4Ze"/>
                     </connections>

@@ -41,7 +41,7 @@ class FavoriteMoviesViewController: UIViewController {
     // MARK:- Function to show placeholder if data is empty
     func checkForEmptyData() {
         if search.count <= 0 {
-            setPlaceholder(message: "Empty...")
+            setPlaceholder(message: "Your favorite movies list is empty....")
         } else {
             FavoriteMoviesTableView.backgroundView = nil
         }
@@ -55,7 +55,8 @@ class FavoriteMoviesViewController: UIViewController {
         placeholderLabel.text = message
         placeholderLabel.textAlignment = .center
         placeholderLabel.textColor = .gray
-        placeholderLabel.font = UIFont.systemFont(ofSize: 18)
+        placeholderLabel.font = UIFont.systemFont(ofSize: 20)
+        placeholderLabel.numberOfLines = 2
         placeholderLabel.sizeToFit()
         
         // Set the label as the background view of the table view
